@@ -1,7 +1,6 @@
 import logging
 from dataclasses import dataclass
-from enum import Enum
-
+from levelup.direction import Direction
 
 DEFAULT_CHARACTER_NAME = "Character"
 
@@ -13,12 +12,6 @@ class GameStatus:
     # NOTE - Game status will have this as a tuple. The Position should probably be in a class
     current_position: tuple = (-100,-100)
     move_count: int = 0
-
-class Direction(Enum):
-    NORTH = "n"
-    SOUTH = "s"
-    EAST = "e"
-    WEST = "w"
 
 class CharacterNotFoundException(Exception):
     pass
