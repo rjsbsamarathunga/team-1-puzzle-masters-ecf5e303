@@ -8,11 +8,31 @@ class GameMap:
     num_positions=100
 
     def calculate_position(starting_position: Position, direction: Direction) -> Position:
-        pass
+        new_position = Position(starting_position.x, starting_position.y)
+        if direction.EAST:
+            new_position.x += 1 
+        if direction.WEST:
+            new_position.x -= 1
+        if direction.NORTH:
+            new_position.y += 1
+        if direction.SOUTH:
+            new_position.y -= 1
+        if is_position_valid(new_position):
+            return new_position
+        else:
+            return starting_position 
+
+
+        
+            
 
     def is_position_valid(postion: Position) -> bool:
-        pass
+        if postion.x not in range(GameMap.x_start, GameMap.x_end+1):
+            return False
+        if postion.y not in range(GameMap.y_start, GameMap.y_end+1):
+            return False
+        return True
 
     def get_total_positions() -> int:
-        return num_positions
+        return GameMap.num_positions
 

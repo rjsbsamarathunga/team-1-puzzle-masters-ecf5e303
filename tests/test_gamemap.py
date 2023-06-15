@@ -13,5 +13,19 @@ class TestGameMap(TestCase):
         self.assertTrue(position.y >= 0)
 
 
+    def test_is_position_pass(self):
+        x = 0
+        y = 9
+        position = Position(x,y)
+        self.assertTrue(GameMap.is_position_valid(position))
 
+    def test_is_position_fail(self):
+        x = -1
+        y = 0
+        position = Position(x,y)
+        self.assertFalse(GameMap.is_position_valid(position))
 
+    def test_total_positions(self):
+        total_positions=100
+        self.assertEqual(total_positions, GameMap.get_total_positions())
+        
