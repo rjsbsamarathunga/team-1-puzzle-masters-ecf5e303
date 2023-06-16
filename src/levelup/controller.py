@@ -42,7 +42,7 @@ class GameController:
         # TODO: Should probably also update the game results
         self.character.move(direction)
         current_position = self.character.get_position()
-        # self.status.current_position = (current_position.x, current_position.y)
+        self.status.current_position = (current_position.x, current_position.y)
         self.status.move_count = self.character.get_num_moves()
 
     def set_character_position(self, xycoordinates: tuple) -> None:
