@@ -1,5 +1,6 @@
 from levelup.position import Position
 from levelup.direction import Direction
+from levelup.exceptions import InvalidMoveException
 class GameMap:
     x_start=0
     x_end=9
@@ -25,8 +26,10 @@ class GameMap:
 
     def is_position_valid(postion: Position) -> bool:
         if postion.x not in range(GameMap.x_start, GameMap.x_end+1):
+            raise InvalidMoveException
             return False
         if postion.y not in range(GameMap.y_start, GameMap.y_end+1):
+            raise InvalidMoveException
             return False
         return True
 
