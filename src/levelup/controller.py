@@ -1,6 +1,7 @@
 import logging
 from dataclasses import dataclass
 from levelup.direction import Direction
+from levelup.character import Character
 
 DEFAULT_CHARACTER_NAME = "Character"
 
@@ -13,15 +14,8 @@ class GameStatus:
     current_position: tuple = (-100,-100)
     move_count: int = 0
 
-class CharacterNotFoundException(Exception):
-    pass
-
-class InvalidMoveException(Exception):
-    pass
 
 class GameController:
-
-
     status: GameStatus
 
     def __init__(self):
@@ -48,7 +42,7 @@ class GameController:
         # TODO: Should probably also update the game results
         self.character.move(direction)
         current_position = self.character.get_position()
-        self.status.current_position = (current_position.x, current_position.y)
+        # self.status.current_position = (current_position.x, current_position.y)
         self.status.move_count = self.character.get_num_moves()
 
     def set_character_position(self, xycoordinates: tuple) -> None:

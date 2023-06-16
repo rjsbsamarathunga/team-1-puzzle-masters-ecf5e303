@@ -1,5 +1,5 @@
 from levelup.position import Position
-from levelup.controller import Direction
+from levelup.direction import Direction
 class GameMap:
     x_start=0
     x_end=9
