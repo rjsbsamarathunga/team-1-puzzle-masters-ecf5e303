@@ -1,7 +1,8 @@
 import logging
 from typing import Callable
-from levelup.controller import GameController, InvalidMoveException
-from levelup.direction import Directions
+from levelup.controller import GameController
+from levelup.exceptions import InvalidMoveException
+from levelup.direction import Direction
 
 VALID_DIRECTIONS = [x.value for x in Direction]
 
