@@ -2,6 +2,7 @@ from unittest import TestCase
 from levelup.character import Character
 from levelup.position import Position
 from levelup.direction import Direction
+from levelup.exceptions import InvalidMoveException
 class TestCharacterInitWithName(TestCase):
     def test_init(self):
         ARBITRARY_NAME = "MyName"

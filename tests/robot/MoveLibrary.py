@@ -1,5 +1,5 @@
 from levelup.controller import GameController
-from levelup.controller import Direction
+from levelup.direction import Direction
 
 class MoveLibrary:
     start_x: int

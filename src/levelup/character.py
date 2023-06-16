@@ -1,6 +1,7 @@
 from levelup.position import Position
 from levelup.direction import Direction
 from levelup.gamemap import GameMap
+from levelup.exceptions import InvalidMoveException
 class Character:
     name = ""
 

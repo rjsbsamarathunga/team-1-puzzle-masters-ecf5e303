@@ -2,6 +2,7 @@ from unittest import TestCase
 from levelup.gamemap import GameMap
 from levelup.position import Position
 from levelup.controller import Direction
+from levelup.exceptions import InvalidMoveException
 class TestGameMap(TestCase):
     def test_is_position_valid(self):
         x = 0
