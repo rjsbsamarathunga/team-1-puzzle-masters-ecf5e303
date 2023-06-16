@@ -12,3 +12,4 @@ class TestGameControllerStartGame(TestCase):
         testObj = GameController()
         testObj.create_character("Test") 
         testObj.start_game()
+        testObj.get_total_positions()

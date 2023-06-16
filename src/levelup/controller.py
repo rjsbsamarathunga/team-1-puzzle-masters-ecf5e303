@@ -2,6 +2,7 @@ import logging
 from dataclasses import dataclass
 from levelup.direction import Direction
 from levelup.character import Character
+from levelup.gamemap import GameMap
 
 DEFAULT_CHARACTER_NAME = "Character"
 
