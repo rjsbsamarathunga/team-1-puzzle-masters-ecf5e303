@@ -26,6 +26,7 @@ class GameController:
         self.character.enter_map()
         current_position = self.character.get_position()
         self.status.current_position = (current_position.x, current_position.y)
+        self.status.running = True
 
     # Pre-implemented to demonstrate ATDD
     # TODO: Update this if it does not match your design (hint - it doesnt)
