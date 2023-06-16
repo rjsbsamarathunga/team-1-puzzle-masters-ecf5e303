@@ -6,9 +6,9 @@ Library           MoveLibrary.py
 *** Test Cases ***                  StartingX     StartingY     StartingMoveCount     Direction     EndingX     EndingY     EndingMoveCount
 Move in the middle of the board N   0             0             1                     NORTH         0           1           2
 Move on bottom edge of the board S  0             0             5                     SOUTH         0           0           6
-Move on bottom edge of the board S2 0             0             20                    SOUTH         0           0           21
+Move on bottom edge of board S2     0             0             20                    SOUTH         0           0           21
 Move on left edge of the board W    0             6             4                     WEST          0           6           5
-Move on bottom edge of the board S3 4             0             35                    SOUTH         4           0           36
+Move on bottom edge of board S3     4             0             35                    SOUTH         4           0           36
 Move in the middle of the board N2  5             5             0                     NORTH         5           6           1
 Move in the middle of the board E   5             6             1                     EAST          6           6           2
 Move in the middle of the board W   3             7             32                    WEST          2           7           33
